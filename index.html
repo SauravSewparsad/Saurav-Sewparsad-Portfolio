@@ -39,15 +39,54 @@
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
                     <p>I'm a Application and Software developer based in Cape town,
-                        currently training at Capaciti to be work ready for ABSA and 
+                        currently training at Capaciti to be  work ready for ABSA and 
                         I'm a student at varsity college doing my Postgrad in data anaylitics.
                         I can create mobile apps, web applications and websites for all users.
                         Coding is really interesting and fun and i always deliver high quality 
                         programs for users. 
                     </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Application development</span><br>Building apps for Android/ web applications</li>
+                            <li><span>Software development</span><br>Creating websites with HTML,CSS & Javascript</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>2023</span><br>Built an app for The Present Movement</li>
+                            <li><span>2023</span><br>Created a bird watching application</li>
+                            <li><span>2023</span><br>Created a time tracker app</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2021-2023</span><br> Varsity college Bachalore computer science and application development</li>
+                            <li><span>2024</span><br>Postgrad Data anaylitics</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 </html>
