@@ -12,10 +12,10 @@
         <div class="container">
             <nav>
                 <!--Change logo images-->
-                <img src="Images/Logo.png" alt="Logo">
+                <img src="Images/SauravLogo.png" alt="Logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href=" #header">Home</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
@@ -35,7 +35,7 @@
             <div class="row">
                 <div class="about-col-1">
                     <!--Change user image to your IRL-->
-                    <img src="Images/User img.jpg" alt="user profile image">
+                    <img src="Images/portfolio.jpg" alt="user profile image">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -175,6 +175,9 @@
 </div>
 <!--------------Java------------->
     <script>
+        var about = document.getElementById("about");
+        about.scrollIntoView({behavior: "smooth"});
+
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
         function opentab(tabname){
